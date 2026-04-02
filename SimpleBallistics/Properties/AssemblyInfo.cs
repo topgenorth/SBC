@@ -1,12 +1,13 @@
 ﻿using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("SimpleBallistics")]
-[assembly: AssemblyDescription("A simple ballistics calculator created by J. Newing (jnewing [at] gmail [dot] com).\r\n\r\nThis was created just for fun as it's something I enjoy doing in my down time. This is provided AS IS, with limited to no support.")]
+[assembly:
+    AssemblyDescription(
+        "A simple ballistics calculator created by J. Newing (jnewing [at] gmail [dot] com).\r\n\r\nThis was created just for fun as it's something I enjoy doing in my down time. This is provided AS IS, with limited to no support.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("J. Newing")]
 [assembly: AssemblyProduct("SimpleBallistics")]

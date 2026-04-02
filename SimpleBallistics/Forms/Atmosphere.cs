@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SimpleBallistics.Forms
@@ -18,11 +11,11 @@ namespace SimpleBallistics.Forms
         }
 
         /// <summary>
-        /// Load our previous settings.
+        ///     Load our previous settings.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void Atmosphere_Load(object sender, EventArgs e)
+        void Atmosphere_Load(object sender, EventArgs e)
         {
             numAlt.Value = (decimal)Properties.Settings.Default.Altitude;
             numBaro.Value = (decimal)Properties.Settings.Default.Barometer;
@@ -30,13 +23,13 @@ namespace SimpleBallistics.Forms
             numHum.Value = (decimal)Properties.Settings.Default.RelativeHumidity;
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        void btnSave_Click(object sender, EventArgs e)
         {
             SaveSettings();
-            this.Close();
+            Close();
         }
 
-        private void SaveSettings()
+        void SaveSettings()
         {
             Properties.Settings.Default.Altitude = (double)numAlt.Value;
             Properties.Settings.Default.Barometer = (double)numBaro.Value;
@@ -45,7 +38,5 @@ namespace SimpleBallistics.Forms
 
             Properties.Settings.Default.Save();
         }
-
-        
     }
 }

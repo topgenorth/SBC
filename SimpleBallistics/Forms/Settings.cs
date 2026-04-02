@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SimpleBallistics.Forms
@@ -17,7 +10,7 @@ namespace SimpleBallistics.Forms
             InitializeComponent();
         }
 
-        private void Settings_Load(object sender, EventArgs e)
+        void Settings_Load(object sender, EventArgs e)
         {
             numZeroRange.Value = (decimal)Properties.Settings.Default.ZeroRange;
             numBulletWeight.Value = (decimal)Properties.Settings.Default.BulletWeight;
@@ -34,20 +27,19 @@ namespace SimpleBallistics.Forms
             cbVelocity.Checked = Properties.Settings.Default.dispVelocity;
             cbEnergy.Checked = Properties.Settings.Default.dispEnergy;
 
-            cmbElevationUnit.SelectedIndex = cmbElevationUnit.Items.IndexOf(Properties.Settings.Default.clickElevationUnit);
+            cmbElevationUnit.SelectedIndex =
+                cmbElevationUnit.Items.IndexOf(Properties.Settings.Default.clickElevationUnit);
             cmbTurretGrad.SelectedIndex = cmbTurretGrad.Items.IndexOf(Properties.Settings.Default.clickTurretGrad);
-
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        void btnSave_Click(object sender, EventArgs e)
         {
             SaveSettings();
-            this.Close();
+            Close();
         }
 
-        private void SaveSettings()
+        void SaveSettings()
         {
-
             Properties.Settings.Default.ZeroRange = (double)numZeroRange.Value;
             Properties.Settings.Default.BulletWeight = (double)numBulletWeight.Value;
             Properties.Settings.Default.MaxRange = (double)numMaxRange.Value;
@@ -68,6 +60,5 @@ namespace SimpleBallistics.Forms
 
             Properties.Settings.Default.Save();
         }
-
     }
 }
