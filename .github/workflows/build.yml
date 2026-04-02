@@ -1,0 +1,32 @@
+﻿name: Build and Release
+
+on:
+  push:
+    branches: [ "master", "main" ]
+  pull_request:
+    branches: [ "master", "main" ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v2
+
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v2
+
+    - name: Restore NuGet packages
+      run: nuget restore SimpleBallistics.sln
+
+    - name: Build with MSBuild
+      run: msbuild SimpleBallistics.sln /p:Configuration=Release /p:Platform="Any CPU"
+
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: SimpleBallistics-Release
+        path: SimpleBallistics\bin\Release\SimpleBallistics.exe
