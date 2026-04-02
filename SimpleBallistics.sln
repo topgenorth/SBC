@@ -14,6 +14,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.github\workflows\build.yml = .github\workflows\build.yml
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Screenshots", "Screenshots", "{75DC5C0F-A015-4916-A2BD-C13A3D18A0E4}"
+	ProjectSection(SolutionItems) = preProject
+		screenshots\2026-04-02 08_07_58-Simple Ballistics - Version_ 1.00-10.png = screenshots\2026-04-02 08_07_58-Simple Ballistics - Version_ 1.00-10.png
+		screenshots\2026-04-02 08_08_52-SimpleBallistics – Atmosphere.cs.png = screenshots\2026-04-02 08_08_52-SimpleBallistics – Atmosphere.cs.png
+		screenshots\2026-04-02 09_10_05-SimpleBallistics – frmMain.cs.png = screenshots\2026-04-02 09_10_05-SimpleBallistics – frmMain.cs.png
+		screenshots\2026-04-02 09_11_55-SimpleBallistics – 2026-04-02 09_10_05-SimpleBallistics – frmMain.cs.png = screenshots\2026-04-02 09_11_55-SimpleBallistics – 2026-04-02 09_10_05-SimpleBallistics – frmMain.cs.png
+		screenshots\2026-04-02 09_12_33-SimpleBallistics – 2026-04-02 09_10_05-SimpleBallistics – frmMain.cs.png = screenshots\2026-04-02 09_12_33-SimpleBallistics – 2026-04-02 09_10_05-SimpleBallistics – frmMain.cs.png
+		screenshots\2026-04-02 09_13_39-SimpleBallistics – 2026-04-02 08_08_52-SimpleBallistics – Atmosphere.cs.png = screenshots\2026-04-02 09_13_39-SimpleBallistics – 2026-04-02 08_08_52-SimpleBallistics – Atmosphere.cs.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
